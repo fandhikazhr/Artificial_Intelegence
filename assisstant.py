@@ -17,3 +17,18 @@ engine.setProperty("voice", voices[1].id)
 engine.setProperty("rate", rate-30)
 
 engine.say("Initializing ......")
+
+# Speak
+def speak(text):
+    engine.say(text)
+    engine.runAndWait()
+
+# Function
+def greetMe():
+    hour = int(datetime.datetime.now().hour)
+    if hour >= 0 and hour < 12:
+        speak("Hello, Good Morning Sir")
+    elif hour >= 12 and hour < 18:
+        speak("Hello, Good Afternoon Sir")
+    else:
+        speak("Hello, Good Evening Sir")
