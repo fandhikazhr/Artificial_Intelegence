@@ -45,5 +45,6 @@ def takeCommand():
         print(f"User said : {query}\n")
     except Exception as e:
         speak("Please say that again")
+        query = takeCommand()
     
     return query
