@@ -32,3 +32,18 @@ def greetMe():
         speak("Hello, Good Afternoon Sir")
     else:
         speak("Hello, Good Evening Sir")
+
+# Microphone
+def takeCommand():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        print("Listening ......")
+        audio = r.listen(source)
+    try:
+        print("Recognizing ......")
+        query = r.recognize_google(audio, language="en-us").lower()
+        print(f"User said : {query}\n")
+    except Exception as e:
+        speak("Please say that again")
+    
+    return query
