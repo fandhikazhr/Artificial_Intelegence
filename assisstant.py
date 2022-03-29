@@ -48,3 +48,32 @@ def takeCommand():
         query = takeCommand()
     
     return query
+
+# Main
+speak("I'am your virtual assisstant")
+greetMe()
+for a in range(9999):
+    query = takeCommand()
+    
+    # Logic
+    if "wikipedia" in query.lower():
+        speak("Searching Wikipedia .... ")
+        query = query.replace("wikipedia", "")
+        results = wikipedia.summary(query, sentences=4)
+        print(results)
+        speak(results)
+
+    elif "how are you" in query.lower():
+        sayhi = ("I'am fine sir, nice to meet you", "Not bad, how about you sir", "very well, and how about you sir", "iam good sir, how about you", "i am great")
+        respon = random.choice(sayhi)
+        speak(f"{respon}")
+
+    elif "good" in query.lower():
+        speak("Thats great")
+
+    elif "who are you" in query.lower():
+        speak("I am an artificial intelligence program, which is used to assist users in carrying out daily activities")
+
+    elif "a joke" in query.lower():
+        print("8 / 2 is o")
+        speak("8 divided 2 is o")
