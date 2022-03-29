@@ -77,3 +77,21 @@ for a in range(9999):
     elif "a joke" in query.lower():
         print("8 / 2 is o")
         speak("8 divided 2 is o")
+
+    elif "age" in query.lower():
+        age = (7,8,9,10,11,12,13,14,15,16,17,18,18,20,21,22,23,24,25) 
+        a = random.choice(age)
+        speak(f"Your age is {a}")
+
+    elif "true" in query.lower():
+        speak("nice")
+
+    elif "wrong" in query.lower():
+        speak("sorry my bad")
+
+    elif "color of the sun"in query.lower():
+        speak("color of the sun is yellow")
+
+    elif "google" in query.lower():
+        speak("Open Google Chrome")
+        subprocess.Popen("C:\Program Files\Google\Chrome\Application\chrome.exe")
