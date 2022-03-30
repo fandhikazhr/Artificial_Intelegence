@@ -95,3 +95,8 @@ for a in range(9999):
     elif "google" in query.lower():
         speak("Open Google Chrome")
         subprocess.Popen("path_to_chrome_application")
+
+    elif "youtube" in query.lower():
+        speak("Open Youtube on Google Chrome")
+        url = "https://www.youtube.com/"
+        webbrowser.open(url)
