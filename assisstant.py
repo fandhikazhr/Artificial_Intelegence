@@ -94,4 +94,4 @@ for a in range(9999):
 
     elif "google" in query.lower():
         speak("Open Google Chrome")
-        subprocess.Popen("C:\Program Files\Google\Chrome\Application\chrome.exe")
+        subprocess.Popen("path_to_chrome_application")
